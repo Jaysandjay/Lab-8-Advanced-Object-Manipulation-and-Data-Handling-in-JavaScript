@@ -88,3 +88,25 @@ let newCourses = [
 student.courses = [...student.courses, ...newCourses]
 console.log("Combined new courses to student.courses")
 console.log("Student.courses:", student.courses)
+console.log(`\n`)
+
+
+// Part 5: Object Methods
+console.log("Part 5: Object Methods")
+// Add a method to the student object to dynamically add a new course to the courses array.
+console.log("Add method to add course")
+student.addCourse = function(course){
+    this.courses.push(course)
+}
+
+console.log("Added NEW Vue course using method")
+student.addCourse("Vue")
+console.log(student.courses)
+console.log(`\n`)
+
+// Add another method to calculate and return the total number of courses.
+console.log("Add method for number of courses")
+student.getNumOfCourses = function(){
+    return this.courses.length
+}
+console.log("Number of courses:", student.getNumOfCourses())
