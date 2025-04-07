@@ -128,3 +128,82 @@ function getAverage(){
 
 
 console.log("Average:", getAverage())
+
+
+
+
+// JS for HTML
+const start = document.getElementById("start")
+const nameDiv = document.getElementById("nameObject")
+const nameInput = document.getElementById("name")
+const enterName = document.getElementById("enterName")
+const attributesDiv = document.getElementById("attributes")
+const objectDiv = document.getElementById("userObject")
+const removeAttributesDiv = document.getElementById("removeAttributes")
+let userObject = {}
+let objectName = ""
+
+start.addEventListener("click", function(){
+    start.style.visibility = "hidden"
+    nameDiv.style.visibility = "visible"
+})
+
+enterName.addEventListener("click", function(){
+    if(nameInput.value){
+        objectName = nameInput.value  
+        nameDiv.style.visibility = "hidden"
+        attributesDiv.style.visibility = "visible"
+        objectDiv.style.visibility = "visible"
+        const shownName = document.getElementById("showName")
+        shownName.textContent = objectName
+
+    }else{
+        alert("Please input a name")
+    }
+})
+
+const attributeNameInput = document.getElementById("attributeName")
+const attributeValueInput = document.getElementById("attributeValue")
+const enterAttribute = document.getElementById("enterAttribute")
+const shownObject = document.getElementById("object")
+const removeBtnsDiv = document.getElementById("removeBtns")
+
+function showObject(){
+    stringObj =JSON.stringify(userObject)
+    shownObject.innerHTML = ""
+    shownObject.innerHTML = (stringObj)
+}
+
+enterAttribute.addEventListener("click", function(){
+    if(attributeNameInput.value.trim() && attributeValueInput.value.trim()){
+        if(Object.keys(userObject).length == 5){
+            alert("Delete an attribute to add one")
+            return
+        }
+        Object.defineProperty(userObject,attributeNameInput.value, 
+            {
+            value: attributeValueInput.value,
+            enumerable: true,
+            configurable: true
+           }
+        )
+        attributeNameInput.value = ""
+        attributeValueInput.value = ""
+        showObject()
+        removeAttributesDiv.style.visibility = "visible"
+        removeBtnsDiv.innerHTML = ""
+        for(const [key, value] of Object.entries(userObject)){
+            let removeBtn = document.createElement("button")
+            removeBtn.innerHTML = key
+            removeBtn.addEventListener("click", function(){
+                delete userObject[key]
+                removeBtn.remove()
+                showObject()
+            })
+            removeBtnsDiv.appendChild(removeBtn) 
+        }
+    }else{
+        alert("Please input name and value")
+    }
+})
+
