@@ -29,4 +29,20 @@ console.log("Part 1: Understanding and Creating Objects")
 console.log(`My name is ${student.name} and I am ${student.age} years old`)
 // Console log student method
 student.display()
-console.log(`/n`)
+console.log(`\n`)
+
+
+// Part 2: Working with JSON
+console.log("Part 2: Working with JSON")
+
+console.log("Student to JSON")
+studentToJSON = JSON.stringify(student)
+console.log(studentToJSON)
+console.log(`\n`)
+
+console.log("Student back to JS Object")
+studentToJSON = JSON.parse(studentToJSON)
+console.log(studentToJSON)
+console.log(`\n`)
+
+
