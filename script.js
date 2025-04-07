@@ -116,6 +116,8 @@ function getAverage() {
 
 console.log("Average:", getAverage());
 
+
+
 // JS for HTML
 const start = document.getElementById("start");
 const nameDiv = document.getElementById("nameObject");
@@ -141,7 +143,7 @@ enterName.addEventListener("click", function () {
     const shownName = document.getElementById("showName");
     shownName.textContent = objectName;
   } else {
-    alert("Please input a name");
+    alert("Please enter a name");
   }
 });
 
@@ -184,6 +186,6 @@ enterAttribute.addEventListener("click", function () {
       removeBtnsDiv.appendChild(removeBtn);
     }
   } else {
-    alert("Please input name and value");
+    alert("Please enter a name and value");
   }
 });
