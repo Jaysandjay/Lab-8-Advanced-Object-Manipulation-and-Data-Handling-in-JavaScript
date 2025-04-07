@@ -110,3 +110,21 @@ student.getNumOfCourses = function(){
     return this.courses.length
 }
 console.log("Number of courses:", student.getNumOfCourses())
+console.log(`\n`)
+
+
+// BONUS
+// Use the reduce method to calculate the average score from the array of scores.
+console.log("Bonus, use reduce to get average")
+
+function getSum(total, score){
+    return total + score
+}
+
+function getAverage(){
+    let sum = scores.reduce(getSum)
+    return (sum / scores.length)
+}
+
+
+console.log("Average:", getAverage())
