@@ -1,49 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css"/>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
     <script defer src="script.js"></script>
     <title>Lab 8</title>
-</head>
-<body>
+  </head>
+  <body>
     <h1>Lab 8</h1>
 
     <div class="container">
-        <div class="part createObject">
-            <h2>Create Object</h2>
-            <div id="nameObject" class="step">
-                <p>Create a name for your object</P>
-                <label for="name">Object Name</label>
-                <input id="name" name="name"/> 
-                <button id="enterName">Enter</button>     
-            </div>
-            <div id="attributes" class="step">
-                <p>Create attributes for your object</p>
-                <div id="attributeInput">
-                    <label for="attributeName"> Name</label>
-                    <input id="attributeName" name="attributeName"/>
-                    <label for="attributeValue">Value</label>
-                    <input id="attributeValue" name="attributeValue"/> 
-                </div>
-                <button id="enterAttribute">Enter</button>     
-            </div>
-            <button id="start">Create</button>
+      <div class="part createObject">
+        <h2>Create Object</h2>
+        <div id="nameObject" class="step">
+          <p>Create a name for your object</p>
+          <label for="name">Object Name</label>
+          <input id="name" name="name" />
+          <button id="enterName">Enter</button>
         </div>
-        <div id="userObject" class="part">
-            <h1 id="showName"></h1>
-            <div id="object">
-            </div>
-        </div>
-        <div id="removeAttributes" class="part">
-            <h2>Remove attribute</h2>
-            <div id="removeBtns">
 
-            </div>
+        <div id="attributes" class="step">
+          <p>Create attributes for your object</p>
+          <div id="attributeInput">
+            <label for="attributeName"> Name</label>
+            <input id="attributeName" name="attributeName" />
+            <label for="attributeValue">Value</label>
+            <input id="attributeValue" name="attributeValue" />
+          </div>
+          <button id="enterAttribute">Enter</button>
         </div>
+
+        <button id="start">Create</button>
+      </div>
+
+      <div id="userObject" class="part">
+        <h1 id="showName"></h1>
+        <div id="object"></div>
+      </div>
+
+      <div id="removeAttributes" class="part">
+        <h2>Remove attribute</h2>
+        <div id="removeBtns"></div>
+      </div>
+      
     </div>
-    
-    
-</body>
+  </body>
 </html>
