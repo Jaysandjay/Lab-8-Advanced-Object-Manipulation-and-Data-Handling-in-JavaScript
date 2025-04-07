@@ -45,4 +45,17 @@ studentToJSON = JSON.parse(studentToJSON)
 console.log(studentToJSON)
 console.log(`\n`)
 
+// Part 3: Using Destructuring Assignment
+// Use destructuring to extract the name and courses properties from the student object.
+console.log("Part 3: Using Destructuring Assignment")
+let {name: studentName, courses: studentCourses} = student
+console.log("Destructured name:", studentName)
+console.log("Destructured courses:", studentCourses)
 
+// Create an array of scores
+let scores = [80, 75, 90, 92, 87]
+// Destructure first 2 scores
+let [score1, score2] = scores
+console.log("Destructured scores")
+console.log("score 1:", score1)
+console.log("score 2:", score2)
